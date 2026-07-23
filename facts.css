@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "geomini";
+    src: url("Fonts/Geomini-VariableFont.woff2") format("woff2");
+}
+@font-face {
+    font-family: "inter";
+    src: url("Fonts/Inter-VariableFont.woff2") format("woff2");
+}
+
+body{
+    background-image: var(--fruit-pattern);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: 600px;
+}
+.back-corner {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    text-decoration: none;
+    overflow: visible;
+}
+
+.bowl-peek {
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 14px hsla(355, 60%, 20%, 0.3);
+    transform: translate(-70px, -70px) scale(0.8);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.back-corner:hover .bowl-peek {
+    transform: translate(-15px, -15px) scale(1);
+    opacity: 1;
+}
+
+.back-arrow {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+
+    background-color: hsla(355, 100%, 98%, 0.4);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 50%;
+    border: 1px solid hsla(0, 0%, 100%, 0.6);
+    box-shadow: 0 8px 24px hsla(355, 60%, 40%, 0.15);
+
+    transition: background-color 0.3s ease-out;
+}
+
+.back-corner:hover .back-arrow {
+    background-color: hsla(355, 65%, 35%, 0.9);
+}
+
+.back-arrow img {
+    width: 26px;
+    height: 26px;
+}
+
+main h1{
+    text-align: center;
+    font-weight: bolder;
+    margin: 30px;
+    color: hsl(355, 65%, 35%);
+    font-size: 200px;
+    text-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
+    font-family: "geomini", sans-serif;
+}
+
+.facts, .bonus{
+    color: hsl(355, 45%, 25%);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-family: "geomini", sans-serif;
+
+    background-color: hsla(355, 100%, 98%, 0.4);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    padding: 20px 28px 20px 48px;
+    border-radius: 14px;
+    border: 1px solid hsla(0, 0%, 100%, 0.6);
+    box-shadow: 0 8px 24px hsla(355, 60%, 40%, 0.15);
+}
+
+footer {
+    font-family: "inter", sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: hsl(20, 40%, 20%);
+    font-size: 0.85rem;
+
+    background-image: url("images/yellow-strokeNEW.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px auto;
+}

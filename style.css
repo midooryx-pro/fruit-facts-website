@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "geomini";
+    src: url("Fonts/Geomini-VariableFont.woff2") format("woff2");
+}
+@font-face {
+    font-family: "inter";
+    src: url("Fonts/Inter-VariableFont.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "geomini", Tahoma, Verdana, sans-serif;
+  background-color: #f3f8f6;
+}
+
+header{
+    background-color: #f57e8a;
+    background-image:
+    linear-gradient(to bottom, transparent 94%, #f3f8f6 100%),
+    linear-gradient(to left, transparent 250px, #f57e8a 550px),
+    image-set(
+        url("images/avif_fruit.avif") type("image/avif"),
+        url("images/expand-fruit.jpg") type("image/jpeg")
+    );
+  
+    background-size: auto 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+
+    color: #ffff;
+    height: 40vh;
+    min-height: 250px;
+    padding: 0 5% 0 clamp(5%, 8vw, 180px);
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+header h1{
+  font-family: "geomini", sans-serif;
+  font-weight: bolder;
+  letter-spacing: -0.3px;
+  text-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
+
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 10px;
+  max-width: 50%;
+  line-height: 1.4;
+}
+header p{
+  font-family: "geomini", sans-serif;
+  font-weight: 450;
+  letter-spacing: 0.2px;
+  opacity: 0.95;
+
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  max-width: 50%;
+  line-height: 1.4;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 40px clamp(5%, 8vw, 180px);
+    justify-items: center;
+
+    background-image: url(images/fruit-patternSQ.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 900px;
+
+    mask-image: linear-gradient(to bottom, transparent 0%, black 30px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30px);
+}
+
+.cards {
+    display: inline-block;
+    width: 200px;
+    height: 260px;
+    margin-left: 30px;
+    perspective: 1000px;
+}
+
+.cards-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg) scale(1);
+    transition: transform 0.22s ease-out 40ms, scale 0.26s ease-out;
+}
+
+.cards:hover .cards-inner {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 11px;
+    color: white;
+    font-family: "geomini", sans-serif;
+}
+
+.front {
+    background-color: hsl(208, 100%, 30%);
+    padding-top: 12px;
+    
+}
+
+.front img {
+    width: 176px;
+    border-radius: 15px;
+    margin-bottom: 14px;
+}
+
+.back {
+    background-color: hsl(208, 60%, 40%);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 15px;
+}
+.back h4 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+.back p {
+    padding-top: 10px;
+}
+
+footer {
+    font-family: "inter", sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: #666666;
+    font-size: 0.85rem;
+
+}
