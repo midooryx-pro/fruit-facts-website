@@ -11,14 +11,16 @@ body{
     background-image: var(--fruit-pattern);
     background-attachment: fixed;
     background-repeat: repeat;
-    background-size: 600px;
+    background-size: clamp(300px, 40vw, 600px);
 }
 .back-corner {
+    font-size: clamp(0.7rem, 1.2vw + 0.3rem, 1rem);
+
     position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 90px;
-    height: 90px;
+    top: 1.3em;
+    left: 1.3em;
+    width: 5.8em;
+    height: 5.8em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,14 +31,14 @@ body{
 
 .bowl-peek {
     position: absolute;
-    top: -60px;
-    left: -60px;
-    width: 140px;
-    height: 140px;
+    top: -3.75em;
+    left: -3.75em;
+    width: 9em;
+    height: 9em;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 4px 14px hsla(355, 60%, 20%, 0.3);
-    transform: translate(-70px, -70px) scale(0.8);
+    transform: translate(-4.5em, -4.5em) scale(0.8);
     opacity: 0;
     transition: transform 0.4s ease-out, opacity 0.4s ease-out;
     pointer-events: none;
@@ -44,7 +46,7 @@ body{
 }
 
 .back-corner:hover .bowl-peek {
-    transform: translate(-15px, -15px) scale(1);
+    transform: translate(-1em, -1em) scale(1);
     opacity: 1;
 }
 
@@ -54,8 +56,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 58px;
-    height: 58px;
+    width: 3.6em;
+    height: 3.6em;
 
     background-color: hsla(355, 100%, 98%, 0.4);
     backdrop-filter: blur(9px);
@@ -72,16 +74,17 @@ body{
 }
 
 .back-arrow img {
-    width: 26px;
-    height: 26px;
+    width: 1.6em;
+    height: 1.6em;
 }
 
 main h1{
     text-align: center;
     font-weight: bolder;
     margin: 30px;
+    margin-top: clamp(60px, 10vw, 20px);
     color: hsl(355, 65%, 35%);
-    font-size: 200px;
+    font-size: clamp(2.5rem, 12vw, 12rem);
     text-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
     font-family: "geomini", sans-serif;
 }
@@ -106,10 +109,10 @@ footer {
     text-align: center;
     padding: 20px;
     color: hsl(20, 40%, 20%);
-    font-size: 0.85rem;
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
 
     background-image: url("images/yellow-strokeNEW.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 200px auto;
+    background-size: clamp(120px, 25vw, 200px) auto;
 }

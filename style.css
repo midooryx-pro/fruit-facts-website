@@ -67,7 +67,7 @@ header p{
 
 main {
     display: grid;
-    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     padding: 40px clamp(5%, 8vw, 180px);
     justify-items: center;
