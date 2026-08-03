@@ -26,7 +26,7 @@ header {
             url("images/fruit-cutoutTP.png") type("image/png")
         );
 
-    background-size: 100% 100%, clamp(100px, 32vw, 250px) auto;
+    background-size: 100% 100%, clamp(180px, 32vw, 250px) auto;
     background-position: 0 0, right center;
     background-repeat: no-repeat, no-repeat;
 
