@@ -109,7 +109,7 @@ footer {
     text-align: center;
     padding: 20px;
     color: hsl(20, 40%, 20%);
-    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
 
     background-image: url("images/yellow-strokeNEW.png");
     background-repeat: no-repeat;

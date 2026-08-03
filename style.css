@@ -18,19 +18,17 @@ body{
   background-color: #f3f8f6;
 }
 
-header{
+header {
     background-color: #f57e8a;
     background-image:
-    linear-gradient(to bottom, transparent 94%, #f3f8f6 100%),
-    linear-gradient(to left, transparent 250px, #f57e8a 550px),
-    image-set(
-        url("images/avif_fruit.avif") type("image/avif"),
-        url("images/expand-fruit.jpg") type("image/jpeg")
-    );
-  
-    background-size: auto 100%;
-    background-position: right center;
-    background-repeat: no-repeat;
+        linear-gradient(to bottom, transparent 94%, #f3f8f6 100%),
+        image-set(
+            url("images/fruit-cutoutTP.png") type("image/png")
+        );
+
+    background-size: 100% 100%, clamp(100px, 32vw, 250px) auto;
+    background-position: 0 0, right center;
+    background-repeat: no-repeat, no-repeat;
 
     color: #ffff;
     height: 40vh;
@@ -38,8 +36,8 @@ header{
     padding: 0 5% 0 clamp(5%, 8vw, 180px);
 
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
 }
 
